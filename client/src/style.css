@@ -1,0 +1,122 @@
+/* src/style.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;          /* default text color */
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 400px;
+}
+
+.form-container {
+  background: #ffffff;  /* white form background */
+  color: #333;          /* ensure form text is dark */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111;          /* make heading even darker */
+}
+
+.input-field {
+  width: 90%;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;  /* white inputs */
+  color: #333;             /* dark input text */
+}
+
+.input-field::placeholder {
+  color: #888;             /* medium-gray placeholder */
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin: -6px 0 10px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1e40af;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: border 0.3s, border-radius 0.3s;
+  color: #333;         /* ensure card text is dark */
+}
+
+.card.active {
+  border-radius: 20px;
+  border: 2px solid #2563eb;
+}
+
+.card-body h3 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+}
+
+.card-body p {
+  margin: 6px 0;
+  color: #333;
+}
+
+.btn-secondary {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #15803d;
+}
+
+@media (max-width: 480px) {
+  .form-container, .card {
+    padding: 15px;
+  }
+  .input-field, .btn-primary, .btn-secondary {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
