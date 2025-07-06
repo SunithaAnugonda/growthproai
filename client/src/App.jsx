@@ -1,3 +1,6 @@
+// src/App.jsx
+const API = "https://growthproai-p29l.onrender.com"
+
 import { useState } from 'react'
 import axios from 'axios'
 import './style.css'
@@ -19,13 +22,13 @@ export default function App() {
   const handleSubmit = async e => {
     e.preventDefault()
     if (!validate()) return
-    const res = await axios.post('http://localhost:5000/business-data', { name, location })
+    const res = await axios.post(`${API}/business-data`, { name, location })
     setData(res.data)
   }
 
   const regenerateHeadline = async () => {
     const res = await axios.get(
-      `http://localhost:5000/regenerate-headline?name=${name}&location=${location}`
+      `${API}/regenerate-headline?name=${encodeURIComponent(name)}&location=${encodeURIComponent(location)}`
     )
     setData(prev => ({ ...prev, headline: res.data.headline }))
   }
